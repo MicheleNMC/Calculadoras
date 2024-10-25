@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Calcular Idade do Seu Gato</title>
+</head>
+<body>
+    <h1>Calcular Idade do Seu Gato</h1>
+    <p>Digite a idade do seu gato(a): </p>
+    <input type="number" id="idade" name="idadename">
+    <div id="Resposta">
+    
+    </div>
+
+    <input type="button" value="calcular"onclick="calcular()">
+    <script>
+        function calcular(){
+            var elementoidade = window.document.getElementById('idade')
+            var idade = Number(elementoidade.value)
+            var resultado = idade*7
+            var elementoresposta = window.document.getElementById('Resposta')
+            var estagio = retornoidade(idade)
+            elementoresposta.innerHTML = "A idade do seu gatinho é: " + resultado + "Estagio:" + estagio 
+    
+            
+        
+        }
+
+        function retornoidade(idade){
+            if (idade <= 1 ){
+                return "Filhote"
+            
+            }
+            if ((idade > 1 ) && (idade <= 2)) {
+                return "Jovem"
+            }
+            if ((idade > 2) && (idade <= 6)){
+                return "Adulto"
+            }
+            else {
+                return "Idoso"
+            }
+
+
+
+        }
+        
+
+        
+    </script>
+    
+</body>
+</html>
